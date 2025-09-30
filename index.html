@@ -109,14 +109,25 @@
     .app-container {
       display: flex;
       gap: 40px;
-      align-items: center;
+      align-items: stretch;
       justify-content: center;
       margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    .app-image {
+      flex: 0 1 auto;
+      min-width: 0;
+      display: flex;
+      align-items: center;
     }
 
     .app-image img {
+      max-width: 100%;
+      height: auto;
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
+      object-fit: contain;
     }
 
     .app-image img:hover {
@@ -236,8 +247,8 @@
   <section class="app-download">
     <h2>Experience AgroSmart Mobile App</h2>
     <div class="app-container">
-      <div class="app-image" style="flex: 0 0 540px;">
-        <img src="app_SS1.jpg" alt="Application Screenshot" style="width: 540px; height: 1569px; object-fit: contain; border-radius: 15px;">
+      <div class="app-image">
+        <img src="app_SS1.jpg" alt="Application Screenshot" style="max-height: 80vh; border-radius: 15px;"
       </div>
       <div class="app-description" style="flex: 1;">
         <h3>AgroSmart Mobile Application</h3>
