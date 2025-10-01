@@ -46,11 +46,12 @@
     .container {
       flex: 1;
       max-width: 900px;
-      margin: -40px auto 40px; /* overlaps header like Flutter elevation */
+      margin: -40px auto 40px;
       background: #fff;
       padding: 40px 30px;
-      border-radius: 20px;
+      border-radius: 25px;
       box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      text-align: center;
     }
 
     h2 {
@@ -80,10 +81,40 @@
       padding: 20px;
     }
 
+    /* Login info card */
+    .login-info {
+      background: #f1f8e9;
+      border-radius: 20px;
+      padding: 25px 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      color: #2e7d32;
+      font-weight: bold;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .login-info:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    }
+
+    .login-info code {
+      background: #e0f2f1;
+      padding: 3px 6px;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .login-info a {
+      color: #2e7d32;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
     /* Button (Flutter ElevatedButton-style) */
     .btn {
       display: inline-block;
-      margin-top: 20px;
+      margin-top: 10px;
       padding: 16px 32px;
       font-size: 1.2rem;
       font-weight: bold;
@@ -136,6 +167,14 @@
       ⚠️ Oops! Video failed to load.<br>Check back later.
     </div>
 
+    <!-- Login Info Card -->
+    <div class="login-info">
+      🔑 <strong>Demo Login:</strong><br>
+      Email/Username: <code>keter</code><br>
+      Password: <code>root</code><br>
+      If the following webpage appears: <a href="https://your-webpage-url.com" target="_blank">Click here</a>
+    </div>
+
     <a href="https://github.com/TheTechTiger/AgroSmart/releases/download/v1.0.0/app-release.apk" class="btn">
       Download APK
     </a>
@@ -159,8 +198,9 @@
         </iframe>
       `;
     }
-    // Example: loadVideo("b5vigEZe7Bs");
+    // Example usage: loadVideo("b5vigEZe7Bs");
   </script>
 
 </body>
 </html>
+
